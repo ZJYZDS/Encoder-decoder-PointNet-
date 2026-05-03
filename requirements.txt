@@ -1,0 +1,11 @@
+torch>=2.0.0
+numpy>=1.20
+matplotlib>=3.5
+h5py>=3.0
+open3d>=0.15
+tensorboard>=2.10
+pytest>=7.0
+# ONNX export
+onnx>=1.13
+# C++ inference (not Python):
+# onnxruntime  # install for testing in Python if desired
