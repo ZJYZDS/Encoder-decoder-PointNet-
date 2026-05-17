@@ -218,25 +218,13 @@ python scripts/export.py --format onnx
 
 ## Architecture
 
-```
-Encoder (×3 SA_MSG):
-  1024 pts ──→ 256 pts ──→ 64 pts ──→ 16 pts
-  (feat dim: 3 → 96 → 192 → 384)
-
-Decoder (×3 FP):
-  16 pts ──→ 64 pts ──→ 256 pts ──→ 1024 pts
-  (feat dim: 384 → 128 → 64 → 64)
-  (skip connections: SA_2→FP_3, SA_1→FP_2, input xyz→FP_1)
-
-Head:
-  Conv1d(64, num_classes) → per-point logits [B, C, 1024]
-```
+![PointNet++ Architecture](pointnetpp_architecture.svg)
 
 - **Set Abstraction (MSG)**: FPS 降采样 + 多尺度 Ball Query + PointAttention 聚合局部特征
 - **Feature Propagation**: 距离加权插值 + 跳跃连接 + MLP 上采样
 - **Attention**: 在每组 SA 内部用自注意力增强局部特征表达
 
-详细架构图见 `pointnetpp_architecture.svg`（可编辑版本为 `pointnetpp_architecture.xml`）。
+可编辑版本: `pointnetpp_architecture.xml`（[Draw.io](https://app.diagrams.net) 打开），重新生成: `python gen_diagram.py`
 
 ## Tests
 
