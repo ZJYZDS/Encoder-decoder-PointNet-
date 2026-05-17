@@ -2,14 +2,12 @@
 
 import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-
 import torch
 import numpy as np
 from ..src.ops import (
     pc_normalize, fastest_point_sample, ball_query,
     idx2points, idx2points_3d, PointNetSetAbstractionMsg,
 )
-
 
 # ── Fixtures ──
 
