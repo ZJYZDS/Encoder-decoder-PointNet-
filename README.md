@@ -218,7 +218,7 @@ python scripts/export.py --format onnx
 
 ## Architecture
 
-![PointNet++ Architecture](pointnetpp_architecture.svg)
+![PointNet++ Architecture](pointnetpp_architecture.png)
 
 - **Set Abstraction (MSG)**: FPS 降采样 + 多尺度 Ball Query + PointAttention 聚合局部特征
 - **Feature Propagation**: 距离加权插值 + 跳跃连接 + MLP 上采样
