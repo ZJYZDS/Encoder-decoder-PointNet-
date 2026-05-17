@@ -1,0 +1,6 @@
+pyrealsense2>=2.50.0
+ultralytics>=8.0.0
+opencv-python>=4.8.0
+numpy>=1.23.0
+pyyaml>=6.0
+torch>=1.13.0

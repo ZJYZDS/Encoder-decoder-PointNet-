@@ -1,0 +1,23 @@
+# ========== RealSense 相机配置 ==========
+realsense:
+  depth_width: 1280
+  depth_height: 720
+  depth_fps: 15
+  color_width: 1280
+  color_height: 720
+  color_fps: 15
+  depth_min: 0.4       # 最小有效深度 (m)
+  depth_max: 4.0       # 最大有效深度 (m)
+
+# ========== YOLO 分割配置 ==========
+yolo:
+  model_path: /home/zjy/roboncon2025_ws/src/yolo_depth_pkg/scripts/best.pt
+  imgsz: 640           # 推理输入尺寸
+  conf: 0.5            # 置信度阈值
+  iou: 0.5             # NMS IoU 阈值
+  kfs_classes: [0, 1]  # 映射到 KFS (label=1) 的 YOLO class IDs
+  device: auto         # auto / cuda / cpu
+
+# ========== 输出配置 ==========
+output:
+  save_dir: output/labeled
